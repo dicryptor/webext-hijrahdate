@@ -1,0 +1,51 @@
+{
+	"applications": {
+		"gecko": {
+			"id": "hijrahdate@mkreators.com",
+			"strict_min_version": "52.0"
+		}
+	},
+	"author": "Mohamed Mubaraq",
+	"browser_action": {
+		"browser_style": true,
+		"default_icon": "icons/date.svg",
+		"default_popup": "static/popup.html",
+		"default_title": "Today's Hijrah Date"
+	},
+	"content_scripts": [
+		{
+			"js": [
+				"js/background.js",
+				"js/hijri.js"
+			],
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"run_at": "document_end"
+		}
+	],
+	"description": "Shows the islamic date",
+	"homepage_url": "https://github.com/dicryptor",
+	"icons": {
+		"16": "icons/date.svg",
+		"19": "icons/date.svg",
+		"24": "icons/date.svg",
+		"32": "icons/date.svg",
+		"38": "icons/date.svg",
+		"48": "icons/date.svg",
+		"64": "icons/date.svg",
+		"72": "icons/date.svg",
+		"96": "icons/date.svg",
+		"128": "icons/date.svg",
+		"256": "icons/date.svg"
+	},
+	"manifest_version": 2,
+	"name": "Today's Hijrah Date",
+	"permissions": [
+		"tabs",
+		"webRequest"
+	],
+	"short_name": "Hijrah Date",
+	"version": "1.0.0"
+}
